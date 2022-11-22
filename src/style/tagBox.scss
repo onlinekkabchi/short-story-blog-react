@@ -1,0 +1,12 @@
+.story--tag-box{
+    display: flex;
+    flex-direction: row;
+}
+.story--tag{
+    background-color: transparent;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    padding: 3px;
+}

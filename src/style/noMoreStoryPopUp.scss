@@ -1,0 +1,20 @@
+$--background--transparent-black:rgba(81, 0, 0, 0.95);
+
+.no-more-story--pop-up{
+    display:none;
+    position:fixed;
+    align-items: center;
+    justify-content: center;
+    width:90%;
+
+    top:10px;
+    background-color: $--background--transparent-black;
+    color:white;
+    
+    font-size: 14px;
+    padding: 20px;
+
+    border-radius: 15px;
+    z-index:10;
+    
+}
