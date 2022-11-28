@@ -5,21 +5,30 @@
   align-items: center;
   justify-content: center;
 }
+.story--book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .story--card {
-  width: 100%;
+  width: 60%;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  width: 70%;
   list-style: none;
   font-size: 14px;
   line-height: 150%;
   border-radius: 10px;
   box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.8);
   overflow: hidden;
-  margin: 10px;
+  margin-bottom: 10px;
 }
 .story--card:hover {
   background: rgba(36, 34, 38, 0.7);
+}
+@media screen and (max-width: 1000px) {
+  .story--card {
+    width: 100%;
+  }
 }
 .story--input {
   display: none;
@@ -153,6 +162,7 @@ input[type=radio]:checked ~ .story--content {
 body {
   display: flex;
   align-items: center;
+  justify-content: center;
   background-image: url("./1474677.jpg");
   padding: 0;
 }
@@ -208,6 +218,13 @@ body {
 .page-btn:hover {
   border: 1px solid white;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  .App {
+    width: 450px;
+    border: 1px solid #808080;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

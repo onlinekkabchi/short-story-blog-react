@@ -3,61 +3,68 @@
 @import "./headerSlider.scss";
 @import "./noMoreStoryPopUp.scss";
 
-$--background--transparent-black:rgba(0,0,0,0.6);
-$--background--transparent-black1:rgba(0,0,0,0.8);
-$--background--transparent-gray--hover:rgba(174, 174, 174, 0.5);
+$--background--transparent-black: rgba(0, 0, 0, 0.6);
+$--background--transparent-black1: rgba(0, 0, 0, 0.8);
+$--background--transparent-gray--hover: rgba(174, 174, 174, 0.5);
 
-body{
-    display: flex;
-    align-items: center;
-    background-image: url("./1474677.jpg");
-    padding: 0;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./1474677.jpg");
+  padding: 0;
 }
-.hi{
-    font-weight: bold;
-    color: white;
+.hi {
+  font-weight: bold;
+  color: white;
 }
 
-.App{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: inherit;
-    padding-bottom: 10px;
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: inherit;
+  padding-bottom: 10px;
 }
-.blog-title--mini{
-    font-size:10px
+.blog-title--mini {
+  font-size: 10px;
 }
-.stack{
-    display: flex;
-    align-items: center;
-    color:#ffffff;
-    line-height: 150%;
-    border-radius: 15px;
-    font-size: 12px;
-    padding: 10px;
+.stack {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  line-height: 150%;
+  border-radius: 15px;
+  font-size: 12px;
+  padding: 10px;
 }
-.lazy-loading-flag{
-    background-color: $--background--transparent-black;
-    color:white;
-    border-radius: 15px;
-    border: 1px solid #ffffff;
-    padding: 10px;
-    font-size: 12px;
-    line-height: 200%;
+.lazy-loading-flag {
+  background-color: $--background--transparent-black;
+  color: white;
+  border-radius: 15px;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 200%;
 }
-.page-btn{
-    background-color: transparent;
-    color: white;
-    width: 100%;
-    height: 30px;
-    margin-right: 3px;
-    margin-left: 3px;
-    border: none;
-    cursor: pointer;
-    &:hover{
-        border: 1px solid white;
-        border-radius: 5px;
-    }
+.page-btn {
+  background-color: transparent;
+  color: white;
+  width: 100%;
+  height: 30px;
+  margin-right: 3px;
+  margin-left: 3px;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .App {
+    width: 450px;
+    border: 1px solid #808080;
+  }
 }
