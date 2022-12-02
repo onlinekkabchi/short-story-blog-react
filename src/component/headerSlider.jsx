@@ -50,9 +50,10 @@ function HeaderSlider() {
     <div
       className="slider-container"
       style={{
+        height: "100px",
         position: "absolute",
         display: "flex",
-        top: "25px",
+        top: "15px",
         overflow: "hidden",
       }}
     >
@@ -62,10 +63,11 @@ function HeaderSlider() {
       <div
         className="slides-box"
         style={{
+          height: "inherit",
           width: "400px",
           display: "flex",
-          rowGap: "0",
-          columnGap: "0",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
         {data.map((item, index) => {

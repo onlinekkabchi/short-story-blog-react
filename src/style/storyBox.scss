@@ -65,3 +65,13 @@ input[type="radio"] {
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  .story {
+    &--card {
+      width: 100%;
+      min-height: 80px;
+      font-size: 18px;
+    }
+  }
+}

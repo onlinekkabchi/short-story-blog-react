@@ -61,6 +61,13 @@ input[type=radio]:checked ~ .story--content {
   transition: opacity 1s;
 }
 
+@media screen and (max-width: 800px) {
+  .story--card {
+    width: 100%;
+    min-height: 80px;
+    font-size: 18px;
+  }
+}
 .story--tag-box {
   display: flex;
   flex-direction: row;
