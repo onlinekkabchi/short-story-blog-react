@@ -5,18 +5,23 @@
   align-items: center;
   justify-content: center;
 }
-.story--card {
+.story--book {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.story--card {
+  width: 70%;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  width: 70%;
   list-style: none;
   font-size: 14px;
   line-height: 150%;
   border-radius: 10px;
   box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.8);
   overflow: hidden;
-  margin: 10px;
+  margin-bottom: 10px;
 }
 .story--card:hover {
   background: rgba(36, 34, 38, 0.7);
@@ -32,6 +37,11 @@
   opacity: 0;
   height: 0;
   overflow: hidden;
+}
+@media screen and (max-width: 1000px) {
+  .story--content {
+    opacity: 100%;
+  }
 }
 .story--origin-link {
   text-decoration: none;
@@ -51,6 +61,13 @@ input[type=radio]:checked ~ .story--content {
   transition: opacity 1s;
 }
 
+@media screen and (max-width: 800px) {
+  .story--card {
+    width: 100%;
+    min-height: 80px;
+    font-size: 18px;
+  }
+}
 .story--tag-box {
   display: flex;
   flex-direction: row;
@@ -65,47 +82,13 @@ input[type=radio]:checked ~ .story--content {
   padding: 3px;
 }
 
-.slider-container {
-  width: inherit;
-  height: 100px;
-  display: flex;
-  margin-bottom: 15px;
-}
-
-.slides-box {
-  position: relative;
-  min-width: 400px;
-  width: auto;
-  height: auto;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-}
-
 .slides-box::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
 
-.slide {
-  position: absolute;
-  width: 100%;
-  transition: all 0.5s;
-}
-
-.blog-title--box {
-  margin-top: 5px;
-  margin-left: 15px;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20%;
-}
-
 .slide-arrow {
-  background-color: transparent;
+  background-color: #000000;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -116,10 +99,11 @@ input[type=radio]:checked ~ .story--content {
   color: #ffffff;
   border: none;
   font-size: 2rem;
-  opacity: 0.5;
+  opacity: 0.9;
   transition: opacity 0.1s;
 }
-.slide-arrow:hover, .slide-arrow :focus {
+.slide-arrow:hover,
+.slide-arrow :focus {
   opacity: 0.7;
 }
 
@@ -151,8 +135,10 @@ input[type=radio]:checked ~ .story--content {
 }
 
 body {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-image: url("./1474677.jpg");
   padding: 0;
 }
