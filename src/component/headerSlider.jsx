@@ -41,29 +41,45 @@ function HeaderSlider() {
 
   useEffect(() => {
     const Interval = setInterval(() => {
-      console.log("interval");
-      console.log(currentIndex);
       sliderScroll();
     }, 10000);
     return () => clearInterval(Interval);
   });
 
   return (
-    <div className="slider-container">
+    <div
+      className="slider-container"
+      style={{
+        position: "absolute",
+        display: "flex",
+        top: "25px",
+        overflow: "hidden",
+      }}
+    >
       <button className="slide-arrow prev-arrow" onClick={headerSliderLeftBtn}>
         &#8249;
       </button>
-      <div className="slides-box">
+      <div
+        className="slides-box"
+        style={{
+          width: "400px",
+          display: "flex",
+          rowGap: "0",
+          columnGap: "0",
+        }}
+      >
         {data.map((item, index) => {
           return (
             <div
               className="slide"
               style={{
+                position: "absolute",
                 display: "flex",
+                width: "400px",
+                flexShrink: "0",
                 flexDirection: "column",
                 justifyContent: "center",
-                color: "#ffffff",
-                transform: `translate(${(index + currentIndex) * 100}%)`,
+                transform: `translate(${(index + currentIndex) * 100}%, 0%)`,
               }}
               key={index}
             >
@@ -72,7 +88,7 @@ function HeaderSlider() {
                 style={{
                   textDecoration: "none",
                   color: "#ffffff",
-                  fontSize: "13px",
+                  fontSize: "18px",
                   fontWeight: "bold",
                 }}
               >
@@ -80,8 +96,8 @@ function HeaderSlider() {
               </a>
               <p
                 style={{
-                  fontSize: "10px",
                   color: "#ffffff",
+                  fontSize: "12px",
                   marginTop: "2px",
                 }}
               >
