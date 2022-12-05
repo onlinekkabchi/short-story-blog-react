@@ -61,11 +61,11 @@ input[type=radio]:checked ~ .story--content {
   transition: opacity 1s;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-device-width: 800px) {
   .story--card {
     width: 100%;
     min-height: 80px;
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 .story--tag-box {
@@ -136,11 +136,10 @@ input[type=radio]:checked ~ .story--content {
 
 body {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   background-image: url("./1474677.jpg");
   padding: 0;
+  margin: 0;
 }
 
 .hi {
@@ -150,10 +149,9 @@ body {
 
 .App {
   display: flex;
+  width: inherit;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: inherit;
   padding-bottom: 10px;
 }
 
@@ -161,39 +159,10 @@ body {
   font-size: 10px;
 }
 
-.stack {
-  display: flex;
-  align-items: center;
-  color: #ffffff;
-  line-height: 150%;
-  border-radius: 15px;
-  font-size: 12px;
-  padding: 10px;
-}
-
-.lazy-loading-flag {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  border-radius: 15px;
-  border: 1px solid #ffffff;
-  padding: 10px;
-  font-size: 12px;
-  line-height: 200%;
-}
-
-.page-btn {
-  background-color: transparent;
-  color: white;
-  width: 100%;
-  height: 30px;
-  margin-right: 3px;
-  margin-left: 3px;
-  border: none;
-  cursor: pointer;
-}
-.page-btn:hover {
-  border: 1px solid white;
-  border-radius: 5px;
+@media only screen and (max-width: 800px) {
+  body {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

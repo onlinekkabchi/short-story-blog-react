@@ -81,6 +81,7 @@ function HeaderSlider() {
                 flexShrink: "0",
                 flexDirection: "column",
                 justifyContent: "center",
+                transitionDuration: "0.35s",
                 transform: `translate(${(index + currentIndex) * 100}%, 0%)`,
               }}
               key={index}
