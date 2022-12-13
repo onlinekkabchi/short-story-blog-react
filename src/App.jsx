@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <HeaderSlider />
-      <StoryBook />
+      <Sample />
       <Outlet />
     </div>
   );

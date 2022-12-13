@@ -1,18 +1,15 @@
 .story--card-container {
-  width: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 .story--book {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .story--card {
-  width: 70%;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   list-style: none;
@@ -61,13 +58,6 @@ input[type=radio]:checked ~ .story--content {
   transition: opacity 1s;
 }
 
-@media screen and (max-device-width: 800px) {
-  .story--card {
-    width: 100%;
-    min-height: 80px;
-    font-size: 15px;
-  }
-}
 .story--tag-box {
   display: flex;
   flex-direction: row;
@@ -119,50 +109,16 @@ input[type=radio]:checked ~ .story--content {
   z-index: 10;
 }
 
-.no-more-story--pop-up {
-  display: none;
-  position: fixed;
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-  top: 10px;
-  background-color: rgba(81, 0, 0, 0.95);
-  color: white;
-  font-size: 14px;
-  padding: 20px;
-  border-radius: 15px;
-  z-index: 10;
-}
-
 body {
-  width: 100%;
-  display: block;
   background-image: url("./1474677.jpg");
-  padding: 0;
-  margin: 0;
-}
-
-.hi {
-  font-weight: bold;
-  color: white;
 }
 
 .App {
-  display: flex;
-  width: inherit;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 10px;
+  display: block;
 }
 
 .blog-title--mini {
   font-size: 10px;
-}
-
-@media only screen and (max-width: 800px) {
-  body {
-    width: 100%;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
