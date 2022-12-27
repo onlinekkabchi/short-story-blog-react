@@ -1,18 +1,17 @@
-.story--card-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .story--book {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: absolute;
+  top: 105px;
+}
+.story--title {
+  cursor: pointer;
+  margin: 20px;
+}
+.story--input {
+  display: none;
 }
 .story--card {
-  width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  list-style: none;
   font-size: 14px;
   line-height: 150%;
   border-radius: 10px;
@@ -23,27 +22,10 @@
 .story--card:hover {
   background: rgba(36, 34, 38, 0.7);
 }
-.story--input {
-  display: none;
-}
-.story--title {
-  cursor: pointer;
-  margin: 20px;
-}
 .story--content {
-  opacity: 0;
   height: 0;
+  opacity: 0;
   overflow: hidden;
-}
-@media screen and (max-width: 1000px) {
-  .story--content {
-    opacity: 100%;
-  }
-}
-.story--origin-link {
-  text-decoration: none;
-  color: white;
-  cursor: hover;
 }
 
 input[type=radio] {
@@ -58,55 +40,28 @@ input[type=radio]:checked ~ .story--content {
   transition: opacity 1s;
 }
 
-.story--tag-box {
-  display: flex;
-  flex-direction: row;
-}
-
-.story--tag {
-  background-color: transparent;
-  color: white;
-  font-size: 12px;
-  cursor: pointer;
-  border: none;
-  padding: 3px;
-}
-
-.slides-box::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-
 .slide-arrow {
-  background-color: #000000;
-  cursor: pointer;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+}
+
+.story-button--box {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 75%;
-  width: 3rem;
-  margin: auto;
-  color: #ffffff;
-  border: none;
-  font-size: 2rem;
-  opacity: 0.9;
-  transition: opacity 0.1s;
-}
-.slide-arrow:hover,
-.slide-arrow :focus {
-  opacity: 0.7;
+  margin-bottom: 10px;
 }
 
-.prev-arrow {
-  position: relative;
-  left: 0;
-  z-index: 10;
-}
-
-.next-arrow {
-  position: relative;
-  right: 0;
-  z-index: 10;
+.story-page--btn {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  margin: 2px;
+  color: white;
+  border-radius: 10px;
 }
 
 body {

@@ -20,7 +20,6 @@ function storyReducer(state, action) {
 function StoryBook() {
   const [lastPage, setLastPage] = useState(null);
   const [state, dispatch] = useReducer(storyReducer, initial);
-  const [data, setData] = useState(false);
 
   const drawPage = (lastnum) => {
     const pageNum = Math.floor(lastnum / 10);

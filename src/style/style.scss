@@ -1,10 +1,6 @@
-@import "./storyBox.scss";
-@import "./tagBox.scss";
-@import "./headerSlider.scss";
-
-$--background--transparent-black: rgba(0, 0, 0, 0.6);
-$--background--transparent-black1: rgba(0, 0, 0, 0.8);
-$--background--transparent-gray--hover: rgba(174, 174, 174, 0.5);
+@import "./book.scss";
+@import "./headslider.scss";
+@import "./pageindex.scss";
 
 body {
   background-image: url("./1474677.jpg");

@@ -55,24 +55,15 @@ function Sample() {
   }, [pageQuery]);
 
   return (
-    <div
-      className="story--book"
-      style={{
-        position: "absolute",
-        top: "120px",
-        padding: "10px",
-      }}
-    >
-      <div
-        className="button--box"
-        style={{
-          display: "flex",
-          flexDirection: "row",
-        }}
-      >
+    <div className="story--book">
+      <div className="story-button--box">
         {Object.keys(state) ? (
           Object.keys(state).map((ki) => (
-            <button key={ki} onClick={() => renderPage(ki)}>
+            <button
+              key={ki}
+              onClick={() => renderPage(ki)}
+              className="story-page--btn"
+            >
               {ki}
             </button>
           ))
@@ -84,6 +75,7 @@ function Sample() {
             setPage(page + 1);
             pageUpdate();
           }}
+          className="story-page--btn"
         >
           add more story
         </button>
@@ -92,6 +84,7 @@ function Sample() {
             console.log(Object.keys(state));
             console.log(state);
           }}
+          className="story-page--btn"
         >
           tester
         </button>

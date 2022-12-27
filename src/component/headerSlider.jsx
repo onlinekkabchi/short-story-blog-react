@@ -51,23 +51,26 @@ function HeaderSlider() {
       className="slider-container"
       style={{
         height: "100px",
-        position: "absolute",
+        width: "100%",
         display: "flex",
-        top: "15px",
         overflow: "hidden",
       }}
     >
-      <button className="slide-arrow prev-arrow" onClick={headerSliderLeftBtn}>
+      <button
+        className="slide-arrow prev-arrow"
+        onClick={headerSliderLeftBtn}
+        style={{ zIndex: "10" }}
+      >
         &#8249;
       </button>
       <div
         className="slides-box"
         style={{
-          height: "inherit",
-          width: "400px",
+          width: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          zIndex: "0",
         }}
       >
         {data.map((item, index) => {
@@ -77,10 +80,12 @@ function HeaderSlider() {
               style={{
                 position: "absolute",
                 display: "flex",
-                width: "400px",
+                width: "100%",
+                // width: "400px",
                 flexShrink: "0",
                 flexDirection: "column",
                 justifyContent: "center",
+                alignItems: "center",
                 transitionDuration: "0.35s",
                 transform: `translate(${(index + currentIndex) * 100}%, 0%)`,
               }}
@@ -110,7 +115,11 @@ function HeaderSlider() {
           );
         })}
       </div>
-      <button className="slide-arrow next-arrow" onClick={headerSliderRightBtn}>
+      <button
+        className="slide-arrow next-arrow"
+        onClick={headerSliderRightBtn}
+        style={{ zIndex: "10" }}
+      >
         &#8250;
       </button>
     </div>

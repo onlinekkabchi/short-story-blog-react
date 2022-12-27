@@ -5,14 +5,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ErrorPage from "./component/errorPage";
-import { StoryBook } from "./component/storyBook";
+import StoryPage from "./component/storyPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
-    children: [{ path: "storybook/:page", element: <StoryBook /> }],
+    children: [{ path: "storybook/:page", element: <StoryPage /> }],
   },
 ]);
 
