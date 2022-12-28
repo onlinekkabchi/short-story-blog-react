@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
-    children: [{ path: "storybook/:page", element: <StoryPage /> }],
+    children: [{ path: "/:page", element: <StoryPage /> }],
   },
 ]);
 

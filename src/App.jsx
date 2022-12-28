@@ -1,14 +1,20 @@
-import { useLoaderData, Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import HeaderSlider from "./component/headerSlider";
 import PageIndex from "./component/pageIndex";
+import { PageProvider } from "./editor/pageContext";
+import { StoryProvider } from "./editor/storyContext";
 
 import "./style/style.css";
 function App() {
   return (
     <div className="App">
-      <HeaderSlider />
-      <PageIndex />
-      <Outlet />
+      <PageProvider>
+        <StoryProvider>
+          <HeaderSlider />
+          <PageIndex />
+          <Outlet />
+        </StoryProvider>
+      </PageProvider>
     </div>
   );
 }

@@ -13,3 +13,17 @@
   color: white;
   border-radius: 10px;
 }
+
+.index-list {
+  display: flex;
+  // flex-direction: row-reverse;
+}
+
+.story-index {
+  width: 20px;
+  padding: 5px;
+  margin: 2px;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 10px;
+}

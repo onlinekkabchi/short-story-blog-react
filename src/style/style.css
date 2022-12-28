@@ -12,6 +12,7 @@
 .story--card {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
+  max-width: 500px;
   font-size: 14px;
   line-height: 150%;
   border-radius: 10px;
@@ -26,6 +27,12 @@
   height: 0;
   opacity: 0;
   overflow: hidden;
+}
+.story--tag {
+  background-color: transparent;
+  color: white;
+  border: none;
+  margin-right: 5px;
 }
 
 input[type=radio] {
@@ -64,12 +71,28 @@ input[type=radio]:checked ~ .story--content {
   border-radius: 10px;
 }
 
+.index-list {
+  display: flex;
+}
+
+.story-index {
+  width: 20px;
+  padding: 5px;
+  margin: 2px;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
 body {
   background-image: url("./1474677.jpg");
 }
 
 .App {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
 }
 
 .blog-title--mini {

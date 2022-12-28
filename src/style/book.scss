@@ -15,6 +15,7 @@ $--background--transparent-black: rgba(0, 0, 0, 0.8);
   &--card {
     background-color: $--background--transparent-black;
     color: white;
+    max-width: 500px;
     font-size: 14px;
     line-height: 150%;
     border-radius: 10px;
@@ -29,6 +30,12 @@ $--background--transparent-black: rgba(0, 0, 0, 0.8);
     height: 0;
     opacity: 0;
     overflow: hidden;
+  }
+  &--tag {
+    background-color: transparent;
+    color: white;
+    border: none;
+    margin-right: 5px;
   }
 }
 
