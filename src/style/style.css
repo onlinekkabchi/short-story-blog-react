@@ -1,17 +1,25 @@
-.story--book {
-  position: absolute;
-  top: 105px;
+.story--page {
+  margin-top: 20px;
+  color: white;
+}
+.story--list {
+  display: flex;
+  flex-direction: column;
 }
 .story--title {
   cursor: pointer;
   margin: 20px;
+}
+.story--loading-message {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 .story--input {
   display: none;
 }
 .story--card {
   background-color: rgba(0, 0, 0, 0.8);
-  color: white;
   max-width: 500px;
   font-size: 14px;
   line-height: 150%;
@@ -54,34 +62,39 @@ input[type=radio]:checked ~ .story--content {
   width: 40px;
 }
 
-.story-button--box {
+.story-index--box {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
 }
-
-.story-page--btn {
-  background-color: transparent;
-  width: 50px;
-  height: 50px;
-  border: 1px solid white;
-  margin: 2px;
-  color: white;
-  border-radius: 10px;
-}
-
-.index-list {
+.story-index--list {
   display: flex;
+  flex-direction: row-reverse;
+}
+.story-index--title {
+  color: white;
+  font-size: 14px;
+  margin-right: 8px;
 }
 
 .story-index {
   width: 20px;
+  height: 20px;
   padding: 5px;
   margin: 2px;
   text-align: center;
   border: 1px solid white;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.index-on {
+  background-color: white;
+  color: black;
+}
+.index-off {
+  background-color: transparent;
+  color: white;
 }
 
 body {

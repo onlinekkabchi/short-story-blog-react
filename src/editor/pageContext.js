@@ -3,7 +3,7 @@ import { createContext, useContext, useReducer } from "react";
 const PageStateContext = createContext(null);
 const PageDispatchContext = createContext(null);
 
-const initialPage = 0;
+const initialPage = null;
 
 function pageReducer(state, action) {
   switch (action.type) {

@@ -8,6 +8,7 @@ export default function StoryPage() {
   const storystate = useStoryState();
   const storydispatch = useStoryDispatch();
   const [storyStore, setStoryStore] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const storyquery = {
     greater: new Number(pagestate) * 10,
@@ -21,13 +22,15 @@ export default function StoryPage() {
       data: data,
     });
     setStoryStore(data);
+    setIsLoading(false);
     console.log(data);
   };
 
   useEffect(() => {
     if (!storystate[pagestate]) {
+      setIsLoading(true);
       fetch(
-        "https://data.mongodb-api.com/app/application-1-qqykd/endpoint/lazysample",
+        "hhttps://data.mongodb-api.com/app/young-klxvd/endpoint/lasysender",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -44,17 +47,7 @@ export default function StoryPage() {
 
   if (storystate[pagestate]) {
     return (
-      <div style={{ color: "white" }}>
-        storypage
-        <button
-          onClick={() => {
-            console.log(storystate);
-            console.log(storyStore);
-          }}
-        >
-          current page
-        </button>
-        {pagestate}
+      <div className="story--page">
         <StoryList data={storystate[pagestate]} />
       </div>
     );
@@ -62,19 +55,20 @@ export default function StoryPage() {
 
   return (
     <>
-      <div style={{ color: "#ffffff" }}>
-        <button
-          onClick={() => {
-            console.log(storyStore);
-            console.log(storyStore.length);
-          }}
-        >
-          button
-        </button>
+      <div className="story--page">
+        {isLoading ? (
+          <div className="story--loading-message">
+            새 이야기 받으러 가는 중...
+          </div>
+        ) : (
+          <></>
+        )}
         {storyStore.length > 0 ? (
           <StoryList data={storyStore} />
         ) : (
-          <div>스토리받아오는중?</div>
+          <div className="story--loading-message">
+            잠깐 기다려요... wait for 3 seconds...
+          </div>
         )}
       </div>
     </>

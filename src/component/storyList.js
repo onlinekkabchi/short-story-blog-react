@@ -10,16 +10,11 @@ export default function StoryList({ data }) {
 
   return (
     <>
-      <button
-        onClick={() => {
-          console.log(data);
-        }}
-      >
-        storydata
-      </button>
-      {data.map((item, index) => (
-        <StoryCard key={index} item={item} />
-      ))}
+      <div className="story--list">
+        {data.map((item, index) => (
+          <StoryCard key={index} item={item} />
+        ))}
+      </div>
     </>
   );
 }

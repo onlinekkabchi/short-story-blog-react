@@ -1,29 +1,38 @@
-.story-button--box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-.story-page--btn {
-  background-color: transparent;
-  width: 50px;
-  height: 50px;
-  border: 1px solid white;
-  margin: 2px;
-  color: white;
-  border-radius: 10px;
-}
-
-.index-list {
-  display: flex;
-  // flex-direction: row-reverse;
+.story-index {
+  &--box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &--list {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  &--title {
+    color: white;
+    font-size: 14px;
+    margin-right: 8px;
+  }
 }
 
 .story-index {
   width: 20px;
+  height: 20px;
   padding: 5px;
   margin: 2px;
   text-align: center;
   border: 1px solid white;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.index {
+  &-on {
+    background-color: white;
+    color: black;
+  }
+  &-off {
+    background-color: transparent;
+    color: white;
+  }
 }
