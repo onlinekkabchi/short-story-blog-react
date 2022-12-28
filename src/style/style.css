@@ -4,7 +4,7 @@
 }
 .story--title {
   cursor: pointer;
-  margin: 20px;
+  padding: 10px 30px 10px 10px;
 }
 .story--input {
   display: none;
@@ -12,7 +12,7 @@
 .story--card {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  max-width: 500px;
+  max-width: 520px;
   font-size: 14px;
   line-height: 150%;
   border-radius: 10px;

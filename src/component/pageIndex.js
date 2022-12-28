@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { usePageDispatch, usePageState } from "../editor/pageContext";
+import { usePageDispatch } from "../editor/pageContext";
 
-function PageIndexButton({ data }) {
+function PageIndexButtons({ data }) {
   const navigate = useNavigate();
   const pageDispatch = usePageDispatch();
 
@@ -25,6 +25,7 @@ export default function PageIndex() {
   const writePageIndex = (data) => {
     const pageArr = [...Array(data).keys()];
     setPage(pageArr);
+    console.log(data);
     console.log(pageArr);
   };
 
@@ -37,7 +38,7 @@ export default function PageIndex() {
         .then((res) => parseInt(res))
         .then((res) => parseInt(res / 10) + 1)
         .then((res) => writePageIndex(res))
-        .catch((err) => console.log(err))
+        .catch((err) => alert("eror! : " + err))
     );
   }, []);
 
@@ -47,7 +48,7 @@ export default function PageIndex() {
       {page.length > 0 ? (
         <div className="index-list">
           {page.map((item, index) => (
-            <PageIndexButton data={item} key={index} />
+            <PageIndexButtons data={item} key={index} />
           ))}
         </div>
       ) : (

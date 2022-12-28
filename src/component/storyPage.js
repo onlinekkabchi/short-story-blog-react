@@ -7,7 +7,8 @@ export default function StoryPage() {
   const pagestate = usePageState();
   const storystate = useStoryState();
   const storydispatch = useStoryDispatch();
-  const [storyStore, setStoryStore] = useState([]);
+  // const [storyStore, setStoryStore] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const storyquery = {
     greater: new Number(pagestate) * 10,
@@ -20,7 +21,8 @@ export default function StoryPage() {
       pageindex: pagestate,
       data: data,
     });
-    setStoryStore(data);
+    // setStoryStore(data);
+    setIsLoading(true);
     console.log(data);
   };
 
@@ -36,24 +38,17 @@ export default function StoryPage() {
       )
         .then((res) => res.json())
         .then((res) => setStoryForThisPage(res))
-        .catch((err) => console.log(err));
+        .catch((err) => alert("page error! : " + err));
     } else {
+      setIsLoading(true);
       console.log("contents for this page already exists, so no download");
     }
   }, [pagestate]);
 
-  if (storystate[pagestate]) {
+  if (storystate[pagestate] && isLoading) {
     return (
       <div style={{ color: "white" }}>
         storypage
-        <button
-          onClick={() => {
-            console.log(storystate);
-            console.log(storyStore);
-          }}
-        >
-          current page
-        </button>
         {pagestate}
         <StoryList data={storystate[pagestate]} />
       </div>
@@ -63,18 +58,10 @@ export default function StoryPage() {
   return (
     <>
       <div style={{ color: "#ffffff" }}>
-        <button
-          onClick={() => {
-            console.log(storyStore);
-            console.log(storyStore.length);
-          }}
-        >
-          button
-        </button>
-        {storyStore.length > 0 ? (
-          <StoryList data={storyStore} />
+        {isLoading ? (
+          <div>로딩중... Loading...</div>
         ) : (
-          <div>스토리받아오는중?</div>
+          <div>스토리받아오는중... Downloading Stories...</div>
         )}
       </div>
     </>

@@ -7,7 +7,7 @@ $--background--transparent-black: rgba(0, 0, 0, 0.8);
   }
   &--title {
     cursor: pointer;
-    margin: 20px;
+    padding: 10px 30px 10px 10px;
   }
   &--input {
     display: none;
@@ -15,7 +15,7 @@ $--background--transparent-black: rgba(0, 0, 0, 0.8);
   &--card {
     background-color: $--background--transparent-black;
     color: white;
-    max-width: 500px;
+    max-width: 520px;
     font-size: 14px;
     line-height: 150%;
     border-radius: 10px;
