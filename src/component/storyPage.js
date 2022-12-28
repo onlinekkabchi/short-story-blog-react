@@ -25,7 +25,7 @@ export default function StoryPage() {
     setIsLoading(false);
     console.log(data);
   };
-
+  //
   useEffect(() => {
     if (!storystate[pagestate]) {
       setIsLoading(true);
