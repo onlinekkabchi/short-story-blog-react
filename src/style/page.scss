@@ -2,12 +2,13 @@ $--background--transparent-black: rgba(0, 0, 0, 0.8);
 
 .story {
   &--page {
-    margin-top: 20px;
+    position: absolute;
+    top: 170px;
     color: white;
   }
   &--list {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   &--title {
     cursor: pointer;
@@ -43,6 +44,7 @@ $--background--transparent-black: rgba(0, 0, 0, 0.8);
     background-color: transparent;
     color: white;
     border: none;
+    text-align: left;
     margin-right: 5px;
   }
 }

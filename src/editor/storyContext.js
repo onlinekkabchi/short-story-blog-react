@@ -8,8 +8,9 @@ const initialList = {};
 function storyReducer(state, action) {
   switch (action.type) {
     case "SET_STORY_FOR_THIS_PAGE":
-      state[action.pageindex] = action.data;
-      return state;
+      const newstorystate = { ...state };
+      newstorystate[action.pageindex] = action.data;
+      return newstorystate;
     default:
       break;
   }

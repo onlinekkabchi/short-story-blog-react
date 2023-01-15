@@ -1,10 +1,11 @@
 .story--page {
-  margin-top: 20px;
+  position: absolute;
+  top: 170px;
   color: white;
 }
 .story--list {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 .story--title {
   cursor: pointer;
@@ -40,6 +41,7 @@
   background-color: transparent;
   color: white;
   border: none;
+  text-align: left;
   margin-right: 5px;
 }
 
@@ -55,11 +57,21 @@ input[type=radio]:checked ~ .story--content {
   transition: opacity 1s;
 }
 
+.slider-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
 .slide-arrow {
   color: #ffffff;
   background-color: transparent;
   border: none;
   width: 40px;
+  z-index: 10;
 }
 
 .story-index--box {

@@ -1,6 +1,15 @@
+.slider-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
 .slide-arrow {
   color: #ffffff;
   background-color: transparent;
   border: none;
   width: 40px;
+  z-index: 10;
 }

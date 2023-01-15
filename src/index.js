@@ -6,13 +6,17 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ErrorPage from "./component/errorPage";
 import StoryPage from "./component/storyPage";
+import GuestBook from "./component/guestBook";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
-    children: [{ path: "/:page", element: <StoryPage /> }],
+    children: [
+      { path: "/:page", element: <StoryPage /> },
+      { path: "/guestbook", element: <GuestBook /> },
+    ],
   },
 ]);
 

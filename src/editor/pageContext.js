@@ -1,21 +1,27 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
+import { countStory } from "./api";
 
 const PageStateContext = createContext(null);
 const PageDispatchContext = createContext(null);
 
-const initialPage = null;
+const initialPage = undefined;
 
 function pageReducer(state, action) {
   switch (action.type) {
     case "SET_PAGE":
+      console.log(action.index);
       return action.index;
     default:
-      break;
+      return;
   }
 }
 
 export function PageProvider({ children }) {
   const [state, dispatch] = useReducer(pageReducer, initialPage);
+
+  useEffect(() => {
+    countStory(dispatch);
+  }, []);
 
   return (
     <PageStateContext.Provider value={state}>
