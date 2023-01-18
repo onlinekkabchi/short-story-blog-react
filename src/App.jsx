@@ -1,13 +1,24 @@
+import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import HeaderSlider from "./component/headerSlider";
 import PageIndex from "./component/pageIndex";
-import StoryShare from "./component/storyShare";
 import { PageProvider } from "./editor/pageContext";
 import { PageIndexProvider } from "./editor/pageIndexContext";
 import { StoryProvider } from "./editor/storyContext";
+import { GlobalStyle } from "./styled-component/globalStyle";
 
 import "./style/style.css";
 function App() {
+  // const [themeOn, setThemeOn] = useState(false);
+
+  // const onAndOffTheme = () => {
+  //   if (themeOn) {
+  //     setThemeOn(false);
+  //   } else {
+  //     setThemeOn(true);
+  //   }
+  // };
+
   return (
     <div className="App">
       <PageProvider>
