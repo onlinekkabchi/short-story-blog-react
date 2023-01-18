@@ -9,28 +9,33 @@ import { GlobalStyle } from "./styled-component/globalStyle";
 
 import "./style/style.css";
 function App() {
-  // const [themeOn, setThemeOn] = useState(false);
+  const [themeOn, setThemeOn] = useState(false);
 
-  // const onAndOffTheme = () => {
-  //   if (themeOn) {
-  //     setThemeOn(false);
-  //   } else {
-  //     setThemeOn(true);
-  //   }
-  // };
+  const onAndOffTheme = () => {
+    if (themeOn) {
+      setThemeOn(false);
+    } else {
+      setThemeOn(true);
+    }
+  };
 
   return (
-    <div className="App">
-      <PageProvider>
-        <StoryProvider>
-          <PageIndexProvider>
-            <HeaderSlider />
-            <PageIndex />
-            <Outlet />
-          </PageIndexProvider>
-        </StoryProvider>
-      </PageProvider>
-    </div>
+    <GlobalStyle>
+      <div className="App">
+        <PageProvider>
+          <StoryProvider>
+            <PageIndexProvider>
+              <HeaderSlider />
+
+              <PageIndex />
+
+              <button onClick={onAndOffTheme}>pink theme</button>
+              <Outlet />
+            </PageIndexProvider>
+          </StoryProvider>
+        </PageProvider>
+      </div>
+    </GlobalStyle>
   );
 }
 

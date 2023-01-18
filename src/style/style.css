@@ -117,10 +117,6 @@ input[type=radio]:checked ~ .story--content {
   color: white;
 }
 
-body {
-  background-image: url("./1474677.jpg");
-}
-
 .App {
   width: 100%;
   height: inherit;
