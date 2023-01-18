@@ -9,10 +9,18 @@ $--background--transparent-black: rgba(0, 0, 0, 0.8);
   &--list {
     display: flex;
     flex-direction: column-reverse;
+    padding-bottom: 20px;
+  }
+  &--label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
   }
   &--title {
+    width: 90%;
     cursor: pointer;
-    margin: 20px;
+    margin-right: 10px;
   }
   &--loading-message {
     text-align: center;

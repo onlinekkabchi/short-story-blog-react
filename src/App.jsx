@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import HeaderSlider from "./component/headerSlider";
 import PageIndex from "./component/pageIndex";
+import StoryShare from "./component/storyShare";
 import { PageProvider } from "./editor/pageContext";
 import { PageIndexProvider } from "./editor/pageIndexContext";
 import { StoryProvider } from "./editor/storyContext";

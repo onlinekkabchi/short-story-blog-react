@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { getReplyList, sendReplyRequest } from "../editor/api";
 import { ReplyProvider } from "../editor/replyContext";
+import { FiShare2 } from "react-icons/fi";
+import StoryShare from "./storyShare";
 
 function Tags({ data }) {
   return (
@@ -90,16 +92,8 @@ function ReplyBox({ order }) {
   );
 }
 
-export default function StoryCard({ item }) {
-  const [reply, setReply] = useState(false);
-
-  const onReply = () => {
-    setReply(true);
-  };
-
-  const offReply = () => {
-    setReply(false);
-  };
+export default function StoryCard(props) {
+  const item = props.item;
 
   return (
     <ReplyProvider>
@@ -112,6 +106,7 @@ export default function StoryCard({ item }) {
         />
         <label className="story--label" htmlFor={item.order}>
           <p className="story--title">{item.storyTitle}</p>
+          {props.ShareButton}
         </label>
         <div className="story--content">
           {/* <a className="story--origin-link" href={item.origin} target="blank"> */}
